@@ -26,6 +26,12 @@ section#conteudo {
 #conteudo p {
     margin: 10px 0;
 }
+.show {
+    display: block
+}
+.hidden {
+    display: none;
+}
 @media (max-width:600px) {
     .ne-login-fixed {
         width: 100%;
@@ -104,4 +110,51 @@ section#conteudo {
         justify-content: center;
         margin-bottom: 10px;
     }
+}
+
+form#cabFormLogin {
+    display: flex;
+    flex-flow: column;
+    margin: 0 55px;
+}
+
+form#cabFormLogin input {
+    max-width: 300px;
+    height: 30px;
+    margin: 10px 0;
+}
+
+.ne-form {
+    position: relative;
+    margin-bottom: 2%;
+}
+
+.ne-form+.ne-form-control-placeholder, 
+.ne-form:valid+.ne-form-control-placeholder {
+    font-size: 14px;
+    font-weight: bold;
+    color: #9b9ea2;
+    transform: translate3d(0,-52%,0);
+    opacity: 1;
+    background-color: #fff;
+    padding: 0 3px;
+    margin-left: 10px;
+    width: 50px;
+    position: absolute;
+    top: 15px;
+}
+
+.submit {
+    display: flex;
+    justify-items: center;
+}
+
+button#btnCabLogin {
+    background-color: #6D2077;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 2% 4%;
+    margin: 0 auto;
 }
