@@ -32,14 +32,97 @@ section#conteudo {
 .hidden {
     display: none;
 }
+@media (min-width:600px) {
+    .ne-login-fixed {
+        position: absolute;
+        width: 340px;
+        height: 220px;
+        top: 80px;
+        right: 22px;
+        bottom: 0;
+        background-color: #FFF;
+        box-shadow: 0 0 8px #262526;
+    }
+    .ne-login-fixed .main-entrar{
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+    }
+
+    div#login-rede-sociais {
+        padding-top: 15px;
+    }
+    .ne-login-fixed .main-entrar span {
+        float: right;
+    }
+
+    .main-entrar p {
+        font-size: 12px;
+        font-weight: bold;
+        color: #63666A;
+        margin: 10px;
+    }
+
+    .main-entrar svg {
+        margin: 10px;
+    } 
+
+    .btn {
+        font-family: "Nova Escola", sans-serif;
+        font-weight: bold;
+        border-radius: 0;
+        padding: 1%;
+        width: 280px;
+        height: 40px;
+        font-size: 16px;
+        font-weight: bold; 
+        display: flex;
+        align-items: center;
+        margin: 10px auto;
+    }
+
+    .btn:nth-child(1) {
+        margin-top: 15px; 
+    }
+
+    .btnFacebook {
+        font-family: sans-serif;
+        background-color: #3B5998;
+        border: 1px solid #3B5998;
+        color: #ffffff;
+        margin-bottom: 1%; 
+    }
+        
+    .btnGoogle {
+        font-family: sans-serif;
+        background-color: #ffffff;
+        border: 1px solid #D8D8D8;
+        color: #63666a; 
+    }
+
+    .icon {
+        margin: 0 5%;
+    }
+
+    hr {
+        border: 0.5px solid #A6A9AD;
+    }
+    .wrapper-email {
+        color: #6D2077;
+        font-size: 14px;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+}
 @media (max-width:600px) {
     .ne-login-fixed {
         width: 100%;
         max-height: 40vh;
         position: fixed;
         bottom: 0;
-        background-color: #E3E4E6;
-        box-shadow: 0 0 8px #262526;
+        background-color: #FFF;
+        box-shadow: 0 0 2px #262526;
     }
 
     .ne-login-fixed .main-entrar{
@@ -122,6 +205,9 @@ form#cabFormLogin input {
     max-width: 300px;
     height: 30px;
     margin: 10px 0;
+    border: 1px solid #63666A;
+    padding-left: 10px;
+    font-size: 14px;
 }
 
 .ne-form {
@@ -131,17 +217,17 @@ form#cabFormLogin input {
 
 .ne-form+.ne-form-control-placeholder, 
 .ne-form:valid+.ne-form-control-placeholder {
-    font-size: 14px;
+    font-size: 12px;
     font-weight: bold;
-    color: #9b9ea2;
+    color: #63666A;
     transform: translate3d(0,-52%,0);
     opacity: 1;
-    background-color: #fff;
+    background-color: #FFF;
     padding: 0 3px;
     margin-left: 10px;
-    width: 50px;
+    width: 40px;
     position: absolute;
-    top: 15px;
+    top: 12px;
 }
 
 .submit {
@@ -156,5 +242,5 @@ button#btnCabLogin {
     font-weight: bold;
     text-transform: uppercase;
     padding: 2% 4%;
-    margin: 0 auto;
+    margin: 10px auto;
 }

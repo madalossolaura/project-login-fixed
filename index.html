@@ -15,7 +15,6 @@
     
     <section id="conteudo">
         <h1>Lorem ipsum dolor</h1>
-        <img src="https://novaescola.org.br/assets/svg/logo.svg" style="background-color:red;">
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tortor massa, posuere a congue lacinia, aliquam nec velit. Donec facilisis finibus elementum. Phasellus sit amet neque varius, volutpat felis sed, pulvinar risus. Quisque sed ligula vulputate, lobortis ligula eu, mollis neque. Morbi tincidunt non ipsum nec aliquam. Nam euismod, purus vitae tristique rutrum, diam dui rutrum ex, sit amet facilisis sapien justo quis ante. Nam id vehicula augue.</p>
         <p>Nam eget lectus malesuada, consectetur diam sit amet, suscipit justo. Vestibulum lacinia eget diam id gravida. Nam pulvinar mauris nisi, a scelerisque quam imperdiet nec. Donec bibendum justo at magna accumsan eleifend eget ut orci. Nullam pulvinar enim sapien, a suscipit eros rhoncus dignissim. Duis aliquam tempus aliquam. Duis sit amet vestibulum elit, at ultricies ex. Pellentesque viverra blandit quam et molestie. Proin efficitur mollis velit elementum porta.</p>
         <p>Aliquam erat volutpat. Nunc magna nibh, malesuada eget volutpat ut, vulputate sed magna. In non quam tempor, lobortis massa sed, sagittis tortor. Cras venenatis pulvinar magna, volutpat lobortis sem faucibus ut. Praesent vestibulum quam nec vulputate tempus. Mauris ac ultrices orci. Maecenas interdum vel elit et pulvinar. Curabitur euismod tortor mi, at eleifend justo venenatis ac. Integer commodo consequat vestibulum. Vivamus eu tincidunt sapien. Quisque nisl ex, vehicula finibus purus in, sodales facilisis diam.</p>
@@ -27,11 +26,13 @@
         <div class="main-entrar">
             <p>Entrar na Nova Escola</p>
             <div id="fechar">
+                <a class="remove" href="#" title="Fechar">
                 <svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><path d="M13.4141,11.9998 L19.7071,5.7068 C20.0981,5.3158 20.0981,4.6838 19.7071,4.2928 C19.3161,3.9018 18.6841,3.9018 18.2931,4.2928 L12.0001,10.5858 L5.7071,4.2928 C5.3161,3.9018 4.6841,3.9018 4.2931,4.2928 C3.9021,4.6838 3.9021,5.3158 4.2931,5.7068 L10.5861,11.9998 L4.2931,18.2928 C3.9021,18.6838 3.9021,19.3158 4.2931,19.7068 C4.4881,19.9018 4.7441,19.9998 5.0001,19.9998 C5.2561,19.9998 5.5121,19.9018 5.7071,19.7068 L12.0001,13.4138 L18.2931,19.7068 C18.4881,19.9018 18.7441,19.9998 19.0001,19.9998 C19.2561,19.9998 19.5121,19.9018 19.7071,19.7068 C20.0981,19.3158 20.0981,18.6838 19.7071,18.2928 L13.4141,11.9998 Z" id="path-1"></path></defs><g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g id="Mobile" transform="translate(-291.000000, -588.000000)"><g id="Icons/Fechar/24px" transform="translate(287.000000, 584.000000)"><mask id="mask-2" fill="white"><use xlink:href="#path-1"></use></mask><use id="Fechar" fill="#000000" fill-rule="evenodd" xlink:href="#path-1"></use><rect id="Color" fill="#63666A" fill-rule="evenodd" mask="url(#mask-2)" x="0" y="0" width="24" height="24"></rect></g></g></g></svg>
+                </a>
             </div>
        </div>
         <hr>
-        <div id="login-rede-sociais" class="hidden">
+        <div id="login-rede-sociais" class="show">
             <button class="btn btnFacebook" title="Continuar com o Facebook">
                 <div class="icon">
                     <svg xmlns="http://www.w3.org/2000/svg" width="9" height="19" viewBox="0 0 9 19"><desc>Created with Sketch.</desc><g fill="none"><g fill="#FFF"><path d="M0 6.1L0 9.3 1.9 9.3 1.9 18.6 5.7 18.6 5.7 9.2 8.3 9.2 8.6 6.1 5.7 6.1 5.7 4.3C5.7 3.5 5.8 3.3 6.6 3.3L8.6 3.3 8.6 0 6 0C3.2 0 1.9 1.2 1.9 3.6L1.9 6.1 0 6.1Z"/></g></g></svg>
@@ -46,7 +47,7 @@
             </button>
             <a id="link-email" href="#login-email-senha" class="wrapper-email">Entrar com email e senha</a>
         </div>
-        <div id="login-email-senha" class="show">
+        <div id="login-email-senha" class="hidden">
             <form id="cabFormLogin" class="ne-form ne-form--vertical"> 
                 <input id="cabUser" type="text" name="user" data-required="true" class="ne-form ne-input ne-border-peixe-boi"> 
                 <label class="ne-form-control-placeholder ne-uppercase" for="cabUser">E-mail</label> 
@@ -61,17 +62,39 @@
     </div>
 
     <script>
-        let redeSocial = document.querySelectorAll('#login-rede-social');
-        let emailSenha = document.querySelectorAll('#login-email-senha');
-        let linkSocial = document.querySelectorAll('#link-social');
-        let linkEmail = document.querySelectorAll('#link-email')
-        
-            if (linkEmail.click()) {
-                console.log('23')
-            } else {
-                console.log('outra coisa')
-            }
+        //let redeSocial = document.querySelector('#login-rede-social');
+        //let emailSenha = document.querySelector('#login-email-senha');
+        //let linkSocial = document.querySelector('#link-social');
+        //let linkEmail = document.querySelector('#link-email');
 
+        let mainContainer = document.querySelector('.ne-login-fixed');
+
+        document.querySelector('.remove').addEventListener("click", removerBloco);
+       
+
+        function removerBloco() {
+           console.log("Fechou")
+           mainContainer.classList.add("hidden");
+        }
+
+        document.querySelector('#link-email').addEventListener("click", trocarClass);
+
+        function trocarClass() {
+            console.log("trocarModal")
+            document.querySelector("#login-rede-sociais").classList.add("hidden");
+            document.querySelector("#login-email-senha").classList.remove("hidden");
+            document.querySelector("#login-email-senha").classList.add("show");
+        }
+
+        document.querySelector('#link-social').addEventListener("click", trocarClass2);
+        function trocarClass2() {
+            console.log("trocarModal")
+            document.querySelector("#login-rede-sociais").classList.remove("hidden");
+            document.querySelector("#login-rede-sociais").classList.add("show");
+            document.querySelector("#login-email-senha").classList.remove("show");
+            document.querySelector("#login-email-senha").classList.add("hidden");
+        }
+        
     </script>
 
 </body>
