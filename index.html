@@ -49,28 +49,24 @@
         </div>
         <div id="login-email-senha" class="hidden">
             <form id="cabFormLogin" class="ne-form ne-form--vertical"> 
+                <!-- email -->
                 <input id="cabUser" type="text" name="user" data-required="true" class="ne-form ne-input ne-border-peixe-boi"> 
                 <label class="ne-form-control-placeholder ne-uppercase" for="cabUser">E-mail</label> 
+                <!-- senha -->    
                 <input id="cabPass" type="password" name="password" data-required="true" class="pass ne-form ne-input ne-border-peixe-boi ne-margin-top-2"> 
                 <label class="ne-form-control-placeholder ne-uppercase" for="cabPass" style="top: 67px;">Senha</label> 
                 <div class="submit ne-margin-top-1"> 
                     <button id="btnCabLogin" class="col-sm-12 justify-content-center ne-btn-solid ne-bg-acai ne-text-3">Entrar</button> 
+                    <a id="link-social" href="#login-rede-sociais" class="wrapper-email">Entrar com redes sociais</a>
                 </div> 
             </form>
-            <a id="link-social" href="#login-rede-sociais" class="wrapper-email">Entrar com email e senha</a>
         </div>
     </div>
 
     <script>
-        //let redeSocial = document.querySelector('#login-rede-social');
-        //let emailSenha = document.querySelector('#login-email-senha');
-        //let linkSocial = document.querySelector('#link-social');
-        //let linkEmail = document.querySelector('#link-email');
-
         let mainContainer = document.querySelector('.ne-login-fixed');
 
         document.querySelector('.remove').addEventListener("click", removerBloco);
-       
 
         function removerBloco() {
            console.log("Fechou")
@@ -78,7 +74,6 @@
         }
 
         document.querySelector('#link-email').addEventListener("click", trocarClass);
-
         function trocarClass() {
             console.log("trocarModal")
             document.querySelector("#login-rede-sociais").classList.add("hidden");
@@ -94,7 +89,6 @@
             document.querySelector("#login-email-senha").classList.remove("show");
             document.querySelector("#login-email-senha").classList.add("hidden");
         }
-        
     </script>
 
 </body>
